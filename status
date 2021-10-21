@@ -1,0 +1,24 @@
+[33mcommit 324e4794426a8a38df7a39cd74e2e42de94e0335[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: a75ff31 2ee9fc7
+Author: Horacio Hernandez <horaciohhernandez@gmail.com>
+Date:   Wed Oct 20 23:07:41 2021 -0300
+
+    Merge branch 'main' of https://github.com/horaciohhernandez/vivir_con_el_alma
+
+[33mcommit 2ee9fc74189f809220dcb839cb4c38e5ae901074[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Horacio Hernandez <85801152+horaciohhernandez@users.noreply.github.com>
+Date:   Wed Oct 20 22:49:19 2021 -0300
+
+    Create README.md
+
+[33mcommit a75ff31d5d71a97a82fd22bc1488dd5bc6d6a546[m[33m ([m[1;32mlist[m[33m)[m
+Author: Horacio Hernandez <horaciohhernandez@gmail.com>
+Date:   Wed Oct 20 22:47:24 2021 -0300
+
+    branch
+
+[33mcommit ab24a481e42c718edae1fd4b4840460c474a5aae[m
+Author: Horacio Hernandez <horaciohhernandez@gmail.com>
+Date:   Wed Oct 20 22:08:50 2021 -0300
+
+    first commit
