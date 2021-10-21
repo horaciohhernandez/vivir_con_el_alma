@@ -1,0 +1,418 @@
+@import "variables.scss"; /* importando las variables */
+//@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");/* importando iconos de bootstrap para utilizar el ckeck */
+/* ejemplo de mixin*/
+@mixin propiedadesTexto($fuente, $tamanioTexto,){
+    font-family: $fuente;
+    font-size: $tamanioTexto;
+}
+
+/* eliminar el subrayado de los accesos*/
+li{    
+    list-style-type: none;
+}
+
+/* formatear los espacios en los accesos*/
+ul{
+    margin:0;
+    padding:0;
+}
+
+/* eliminar el punto que se genera delante de los accesos*/
+a{
+    text-decoration: none; 
+}
+/* header, logo y banner */
+body{
+    background-image: linear-gradient(to right, #479178, #6c7e8f);
+}
+.gridBanner{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:"banner";
+    justify-items:stretch;      
+    background-image: linear-gradient(to right, #8b5a6d, #856c8f);
+    width: 100%;
+    height: 50vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto-bold';
+    
+    #banner{
+        grid-area: banner;        
+        height: 300px;
+        width: 300px;
+        justify-self: center;
+        background: #4e7f96;
+        text-align: center;
+        padding: 40px 0 50px;
+        clip-path: polygon(0 0, 100% 0%, 100% 74%, 0% 100%);
+    }    
+    
+}
+/* menu de navegacion - Menu de Ingreso o Registrate*/
+.gridMenu{
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: auto;
+    grid-template-areas:"banner";
+    justify-items:center;
+    justify-content:space-evenly;
+        
+    .menu{
+        grid-area: menu;  
+        margin-top: 3vh;
+        margin-bottom: 0;
+        display: flex;
+        
+        align-items:center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+                
+        #menuColor{    
+        margin-left: 50vh; 
+        margin-right: 50vh;
+        background-color: #4e7f96;
+        color: $colorTitulo;
+        
+        }
+        /* ejemplo de mixin*/
+        .textoPropiedades{
+            @include propiedadesTexto ('Roboto-bold', 4vh);
+            font: bold;
+
+        }
+        /* cambio de color del menu de navegacion cuando te posicionas arriba */
+        #menuColor:hover{
+        color: #021E26;
+        } 
+    }   
+}
+ 
+/* footer */
+.gridFooter{
+    background: rgb(190, 190, 190);
+    display: grid;
+    margin-top: 3vh;
+    grid-template-columns: 25% 60% 10%;
+    grid-template-rows: auto;
+    grid-template-areas:"redes textos disenador";
+    justify-items:stretch;
+    justify-content:stretch;
+
+    .redes{
+        grid-area: redes; 
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        justify-items: center;
+        text-align:center;
+        align-self: center;              
+        height: auto;
+        width: auto; 
+
+        .imagenes_redes{ 
+            grid-area: redes;           
+            display: flex;
+            align-self: center;
+            
+            
+        }
+    }     
+        #textosFooter{        
+            grid-area: textos; 
+            @include propiedadesTexto('Roboto-bold', 2vh);
+            height: auto;
+            width: auto;
+            align-self: center;
+                
+            .textosFooter{    
+            color:$colorTitulo;
+            text-align:center;
+            align-items:stretch;
+            padding: 1vh;    
+            }        
+        }
+        #textosFooter_disenador{
+            grid-area: textos; 
+            @include propiedadesTexto('Roboto-bold', 2vh);
+            height: auto;
+            width: auto;    
+        }    
+        .disenador{
+            grid-area: disenador;
+            margin: 0;
+            padding: 1vh;        
+            flex-direction: column;
+            justify-content:left;
+            text-align:center;
+            align-self: center;    
+            height: auto;
+            width: auto;
+            h6{
+                @include propiedadesTexto('Roboto-bold', 2vh);
+                color:$colorTitulo;
+            }        
+                    
+        }    
+}
+// Todo lo relacionado con los formularios de Registro e Ingreso
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodyRegistro {
+    background-image: linear-gradient(to right, #479178, #6c7e8f);
+    width: 100%;
+    height: auto;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto-bold';
+
+    .container {
+        background: #fff;
+        width: 380px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .form-header {
+            background: #4e7f96;
+            text-align: center;            
+            padding: 30px 0 40px;
+            clip-path: polygon(0 0, 100% 0%, 100% 74%, 0% 100%);
+        }
+        .form-content {
+            display: none;
+
+            form {
+                padding: 10px 40px 40px;
+                width: 100%;
+                height: auto;
+                text-align: center;
+
+                .form-title {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    margin-bottom: 32px;
+                    overflow: hidden;
+                    font-family: 'Roboto-bold';
+                    color: #b45050;
+
+                    h3 {
+                        position: relative;
+                        display: inline-block;
+                        color: #b45050;
+                        padding: 0 10px;
+                    }
+        
+                    h3::after,
+                    h3::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 3px;
+                        background: #021e26;
+                        top: 0.5em;
+                    }
+        
+                    h3::after {
+                        left: 100%;
+                    }
+            
+                    h3::before {
+                        right: 100%;
+                    }
+                } 
+                
+                .input-group {
+                    position: relative;
+                    margin-bottom: 40px;
+                }
+
+                .label {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 14px;
+                    color: #b45050;
+                    padding-left: 10px;
+                    cursor: text;
+                    transition: all .3s ease;
+                    font-family: 'Roboto-bold';
+                }
+    
+                .form-input:focus + label {
+                    top: -14px;
+                    font-size: 12px;
+                    color: #666565;
+                    font-family: 'Roboto-bold';
+                }
+            }           
+        }
+        
+        .form-content {
+            display: none;
+
+            form {
+                width: 100%;
+                height: auto;
+                text-align: center;
+
+                .form-title {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    margin-bottom: 32px;
+                    overflow: hidden;
+                    font-family: 'Roboto-bold';
+                    color: #b45050;
+
+                    h3 {
+                        position: relative;
+                        display: inline-block;
+                        color: #b45050;
+                        padding: 0 10px;
+                    }
+        
+                    h3::after,
+                    h3::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 3px;
+                        background: #021e26;
+                        top: 0.5em;
+                    }
+        
+                    h3::after {
+                        left: 100%;
+                    }
+            
+                    h3::before {
+                        right: 100%;
+                    }
+                } 
+                
+                .input-group {
+                    position: relative;
+                    margin-bottom: 40px;
+                }
+
+                .label {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 14px;
+                    color: #b45050;
+                    padding-left: 10px;
+                    cursor: text;
+                    transition: all .3s ease;
+                    font-family: 'Roboto-bold';
+                }
+    
+                .form-input:focus + label {
+                    top: -30px;
+                    font-size: 12px;
+                    color: #666565;
+                    font-family: 'Roboto-bold';
+                }
+                span{
+                    color:#b31717;
+                    font-family: 'Roboto-bold';
+                }
+            }           
+        }    
+         
+            .form-header img {
+                vertical-align: center;
+                width: 100px;
+            }
+
+            .form-header h1 {
+                color: #fff;
+                font-family: 'Roboto-bold';
+                font-weight: normal;
+                margin-top: 5px;
+            }
+
+            .form-header span {
+                color: #d0d0d4;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                border: none;
+                border-bottom: 2px solid #021e26;
+                width: 100%;
+                outline: none;
+                font-size: 14px;
+                color: #021e26;
+                padding-left: 10px;
+                font-family: 'Roboto-bold';
+            }
+           
+            .active {
+                top: -14px;
+                font-size: 12px;
+                color: #666565;
+            }
+
+            .error {
+                color: #FF0000;
+            }
+
+            input[type="submit"] {
+                background: none;
+                border: none;
+                background:#b45050;
+                color: #fff;
+                width: 100%;
+                font-size: 14px;
+                padding: 10px 0;
+                font-family: AbeeZee;
+                margin-bottom: 16px;
+                border-radius: 10px;
+                transition: all .5s ease;
+            }
+
+            input[type="submit"]:hover {
+                background: #021E26;
+            }
+
+            .input-group > p {
+                color: #b45050;
+                text-align: center;
+                font-size: 14px;
+                font-family: 'Roboto-bold';
+                
+            }
+
+            .input-group p > a {
+                text-decoration: none;
+                color: #039BE5;
+            }
+
+            .input-group p > a:hover {
+                text-decoration: underline;
+            }
+            
+
+            .form-content:nth-child(2) {
+                display: block;
+            }
+    }
+    
+}
+
+//GO To HOME
+.gotohome{      
+    align-self: flex-end;
+    padding-right: 5vh;
+    padding-left: 2vh;
+}
