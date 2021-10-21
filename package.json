@@ -1,0 +1,25 @@
+{
+  "name": "vivir_co_el_alma",
+  "version": "1.0.0",
+  "description": "Alejandra Crespo",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/index.scss css/index.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horaciohhernandez/vivir_con_el_alma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/horaciohhernandez/vivir_con_el_alma/issues"
+  },
+  "homepage": "https://github.com/horaciohhernandez/vivir_con_el_alma#readme",
+  "dependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

@@ -16,7 +16,7 @@ a {
 
 /* header, logo y banner */
 body {
-  background-image: white}
+  background-image: linear-gradient(to right, #479178, #6c7e8f); }
 
 .gridBanner {
   display: grid;
@@ -134,8 +134,7 @@ body {
   box-sizing: border-box; }
 
 .bodyRegistro {
-  background-image: white;
-  
+  background-image: linear-gradient(to right, #479178, #6c7e8f);
   width: 100%;
   height: auto;
   display: flex;
@@ -143,7 +142,7 @@ body {
   justify-content: center;
   font-family: 'Roboto-bold'; }
   .bodyRegistro .container {
-    background: #cec1c8;
+    background: #fff;
     width: 380px;
     border-radius: 10px;
     overflow: hidden; }
