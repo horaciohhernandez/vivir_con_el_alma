@@ -15,9 +15,6 @@ a {
   text-decoration: none; }
 
 /* header, logo y banner */
-body {
-  background-image: linear-gradient(to right, #479178, #6c7e8f); }
-
 .gridBanner {
   display: grid;
   grid-template-columns: 100%;
@@ -147,7 +144,6 @@ body {
     border-radius: 10px;
     overflow: hidden; }
     .bodyRegistro .container .form-header {
-      background: #4e7f96;
       text-align: center;
       padding: 30px 0 40px;
       clip-path: polygon(0 0, 100% 0%, 100% 74%, 0% 100%); }
@@ -257,7 +253,7 @@ body {
       vertical-align: center;
       width: 100px; }
     .bodyRegistro .container .form-header h1 {
-      color: #fff;
+      color: #666565;
       font-family: 'Roboto-bold';
       font-weight: normal;
       margin-top: 5px; }
@@ -306,8 +302,3 @@ body {
       text-decoration: underline; }
     .bodyRegistro .container .form-content:nth-child(2) {
       display: block; }
-
-.gotohome {
-  align-self: flex-end;
-  padding-right: 5vh;
-  padding-left: 2vh; }
