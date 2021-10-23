@@ -15,15 +15,15 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    var myButton = $('#mybutton');
-    var userFeed = new Instafeed({
+    let myButton = $('#mybutton');
+    let userFeed = new Instafeed({
         get: 'user',
         userId: '4828631159',
         accessToken: '4828631159.1677ed0.3e66d0fb39cc4a8383ddd034121c65dc',
         limit: '6',
         sortBy: 'most-recent',
         after: function () {
-            var images = $("#instafeed").find('a');
+            let images = $("#instafeed").find('a');
             $.each(images, function (index, image) {
                 var delay = (index * 75) + 'ms';
                 $(image).css('-webkit-animation-delay', delay);

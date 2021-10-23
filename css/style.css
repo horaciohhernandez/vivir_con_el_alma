@@ -658,12 +658,12 @@ footer a{
 .copyright > a:hover{
     color: #fff;
 }
-/*rooms page*/
+/*hab*/
 .bg-set-col{
     background: rgba(0,0,0,0.25);
     padding: 50px 0;
 }
-/*about page*/
+/*nosotros*/
 .about-left p {
     color: #000000;
     font-size: 45px;
@@ -708,8 +708,8 @@ footer a{
     line-height: 24px;
     margin-top: 20px;
 }
-/*contact*/
-/*contact*/
+/*contacto*/
+/*contacto*/
 .contact-left-block > h3 , .contact-form > h3{
     color: #000;
     font-size: 25px;
@@ -772,7 +772,7 @@ footer a{
     animation: 1.5s ease 0s normal none 1 running flash;
     opacity: 0.6;
 }
-/*dinning*/
+/*promociones*/
 .blog-title-head {
     font-size: 25px;
     letter-spacing: 2px;
@@ -785,6 +785,10 @@ footer a{
 /* .blog-title-head > a:hover{ */
 
 /* } */
+#rounded-circle {
+    border-radius: 50% !important;
+    width: 80px;   
+}
 .blog-date {
     color: #000;
     font-size: 18px;
